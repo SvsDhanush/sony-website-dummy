@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(0, 0, 0);">
+    <div class="container">
+        <!-- Sony Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="assets/sonyLogo.png" alt="Sony Electronics" style="height: 20px;">
+        </a>
+
+        <!-- Toggler for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <!-- Home Link -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <!-- My Sony Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="mySonyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        My Sony
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mySonyDropdown">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i> Sign In</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> My Account Details</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box"></i> Register Product</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-envelope"></i> Newsletter Preferences</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots"></i> Alpha Community</a></li>
+                    </ul>
+                </li>
+
+                <!-- Products Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+
+                <!-- Contact Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+                <!-- Search Icon with Dropdown -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="searchIcon" (click)="toggleSearchBarNew()"><i class="bi bi-search"></i></a>
+                    <div id="searchDropdown">
+                        <div class="input-group">
+                          <!-- Input Field -->
+                          <input type="text" class="form-control" placeholder="Search">
+                          
+                          <!-- Search Icon -->
+                          <button class="btn" type="button">
+                            <i class="bi bi-search"></i>
+                          </button>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,18 @@
+/* Set a custom height for the carousel */
+.carousel-inner img {
+    height: 500px; /* Adjust the height to whatever fits your design */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    width: 100%; /* Make sure the image spans the full width of the container */
+  }
+  
+  /* Optional: Adjust the carousel container height */
+  #carouselExampleCaptions {
+    height: 500px; /* You can also change the container's height */
+  }
+  
+  /* Optionally, adjust the font size or position of captions */
+  .carousel-caption {
+    font-size: 1rem; /* Adjust the font size */
+    bottom: 20px; /* Adjust the position of the caption */
+  }
+  

@@ -1,0 +1,41 @@
+<!-- <div class="container py-5">
+    <h2 class="text-center mb-4">Current Promotions & Offers</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col" *ngFor="let promotion of promotions">
+        <div class="promotion-card d-flex">
+         
+          <div class="promotion-image">
+            <img [src]="promotion.image" alt="Promotion Image" class="img-fluid">
+          </div>
+         
+          <div class="promotion-content ms-3">
+            <h5 class="promotion-title">{{ promotion.title }}</h5>
+            <p class="promotion-description">{{ promotion.description }}</p>
+            <a href="#" class="btn btn-primary">Know More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+   <div class="container py-5">
+    <h2 class="text-center mb-4">Current Promotions & Offers</h2>
+    <div class="promotion-list">
+      <div class="promotion-card" *ngFor="let promotion of promotions">
+        <div class="promotion-content d-flex">
+          <!-- Left side: Image -->
+          <div class="promotion-image">
+            <img [src]="promotion.image" alt="Promotion Image" class="img-fluid">
+          </div>
+          <!-- Right side: Text and Know More button -->
+          <div class="promotion-details ms-3">
+            <h5 class="promotion-title">{{ promotion.title }}</h5>
+            <p class="promotion-description">{{ promotion.description }}</p>
+            <a href="#" class="btn btn-primary">Know More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

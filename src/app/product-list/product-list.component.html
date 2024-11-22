@@ -1,0 +1,28 @@
+<!-- product-list.component.html -->
+<div class="container py-5">
+  <h2 class="text-center mb-4">Featured Products</h2>
+
+  <!-- Horizontal scrolling container -->
+  <div class="product-container">
+    <!-- Left navigation button -->
+    <button class="scroll-btn left" (click)="scrollLeft()">&#8249;</button>
+
+    <!-- Product cards in a row (scrollable horizontally) -->
+    <div class="product-list">
+      <div class="product-card" *ngFor="let product of products">
+        <div class="card">
+          <img [src]="product.image" class="card-img-top" alt="{{ product.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text text-muted"><strong>Price:</strong> ${{ product.price | number:'1.2-2' }}</p>
+            <a href="#" class="btn btn-primary">View Product</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right navigation button -->
+    <button class="scroll-btn right" (click)="scrollRight()">&#8250;</button>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+/* Style for the container holding all products */
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Make the product list scroll horizontally */
+  .product-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;  /* Spacing between products */
+    scroll-behavior: smooth;  /* Smooth scrolling */
+    padding: 10px 0;  /* Padding for top and bottom */
+    flex-wrap: nowrap;
+    -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer 10+ */
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
+  }
+
+  .product-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Each product card */
+  .product-card {
+    flex: 0 0 auto;  /* Prevent cards from shrinking or growing */
+    width: 250px;  /* Set a fixed width for all cards */
+    height: 400px;  /* Set a fixed height for all cards */
+    display: flex;
+    flex-direction: column;  /* Stack image and text vertically */
+    overflow: hidden;  /* Hide overflow content */
+    border-radius: 10px;
+    /* Soft shadow */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Styling for the image */
+  .card-img-top {
+    width: 100%;  
+    /* Make image take full width */
+    height: 200px;  /* Set a fixed height for the image */
+    object-fit: cover;  /* Ensure the image covers the area without distorting */
+  }
+  
+  /* Style for the card body */
+  .card-body {
+    flex-grow: 1;  /* Allow the card body to take remaining space */
+    padding: 15px;  /* Add padding inside the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Space out title, text, and price */
+  }
+  
+  /* Title and text */
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Price text styling */
+  .card-text.text-muted {
+    font-size: 1.1rem;  /* Slightly larger font size for price */
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style for the view product button */
+  .card-body .btn {
+    margin-top: auto;  /* Push the button to the bottom */
+  }
+  
+  /* Hover effect for the card */
+  /* Lift the card on hover */
+  /* Increase shadow on hover */
+  /* .card:hover {
+    transform: translateY(-10px);  
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);  
+  } */
+  
+  /* Style for the navigation buttons */
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 10%;
+    z-index: 2;
+  }
+  
+  .scroll-btn.left {
+    left: 10px;  /* Position the left button */
+  }
+  
+  .scroll-btn.right {
+    right: 10px;  /* Position the right button */
+  }
+  
+  .scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
